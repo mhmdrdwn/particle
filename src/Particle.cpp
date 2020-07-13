@@ -24,4 +24,5 @@ void Particle::update(int interval){
 
 	m_x += xSpeed * interval;
 	m_y += ySpeed * interval;
+
 }

@@ -32,8 +32,6 @@ int main() {
     while(true){
     	int elapsed = SDL_GetTicks();
 
-    	screen.clear();
-
     	swarm.update(elapsed);
     	unsigned char green = (1 + sin(elapsed*0.0005))* 128;
     	unsigned char red = (1 + sin(elapsed*0.0004))* 128;
@@ -47,6 +45,8 @@ int main() {
     		int y = particle.m_y * Screen::SCREEN_WIDTH/2 + Screen::SCREEN_HEIGHT/2;
     		screen.setPixel(x, y, red, green, blue);
     	}
+
+    	screen.boxBlur();
 
     	//draw the screen
     	screen.update();
