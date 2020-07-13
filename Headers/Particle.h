@@ -11,8 +11,8 @@
 struct Particle {
 	double m_x;
 	double m_y;
-	double xSpeed;
-	double ySpeed;
+	double m_speed;
+	double m_direction;
 
 public:
 	Particle();
