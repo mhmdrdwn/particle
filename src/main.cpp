@@ -34,7 +34,7 @@ int main() {
 
     	screen.clear();
 
-    	swarm.update();
+    	swarm.update(elapsed);
     	unsigned char green = (1 + sin(elapsed*0.0005))* 128;
     	unsigned char red = (1 + sin(elapsed*0.0004))* 128;
     	unsigned char blue = (1 + sin(elapsed*0.0006))* 128;
