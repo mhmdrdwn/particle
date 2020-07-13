@@ -101,6 +101,10 @@ bool Screen::init(){
 	return true;
 }
 
+void Screen::clear(){
+	memset(m_buffer, 0, SCREEN_HEIGHT*SCREEN_WIDTH*sizeof(Uint32));
+}
+
 bool Screen::processEvents(){
 	SDL_Event event;
 	//THIS FETCH latest event

@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : sdl.cpp
+// Name        : main.cpp
 // Author      : Mohamed
 // Version     :
 // Copyright   : Your copyright notice
@@ -13,7 +13,6 @@
 #include "../Headers/Screen.h"
 #include "../Headers/Particle.h"
 #include "../Headers/Swarm.h"
-
 
 using namespace std;
 
@@ -32,6 +31,10 @@ int main() {
     //GUI LOOP
     while(true){
     	int elapsed = SDL_GetTicks();
+
+    	screen.clear();
+
+    	swarm.update();
     	unsigned char green = (1 + sin(elapsed*0.0005))* 128;
     	unsigned char red = (1 + sin(elapsed*0.0004))* 128;
     	unsigned char blue = (1 + sin(elapsed*0.0006))* 128;
